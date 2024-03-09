@@ -1,5 +1,3 @@
-// Replac0e ./data.json with your JSON feed
-
 let mama =
     fetch('./pokemon.json').then(response => {
         return response.json();
@@ -104,23 +102,19 @@ let mama =
             //-------------------------------------------------------------
 
 
-            // Ajoutez ceci à la fin de votre code actuel
+
 
             let searchValue = document.getElementById("search");
             searchValue.addEventListener("keyup", () => {
-                let filter = searchValue.value.toLowerCase(); // Obtenez la valeur de l'input de recherche en minuscules
-
-                // Parcourez les cartes (éléments "cards") pour filtrer en fonction de la valeur de recherche
+                let filter = searchValue.value.toLowerCase(); 
                 let cards = document.getElementsByClassName("card");
                 for (let i = 0; i < cards.length; i++) {
                     let card = cards[i];
-                    let cardName = card.querySelector(".nom").textContent.toLowerCase(); // Obtenez le nom de la carte en minuscules
-
-                    // Vérifiez si le nom de la carte contient la valeur de recherche
+                    let cardName = card.querySelector(".nom").textContent.toLowerCase(); 
                     if (cardName.includes(filter)) {
-                        card.style.display = "block"; // Affichez la carte si elle correspond
+                        card.style.display = "block";
                     } else {
-                        card.style.display = "none"; // Masquez la carte si elle ne correspond pas
+                        card.style.display = "none"; 
                     }
                 }
             });

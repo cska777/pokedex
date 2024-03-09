@@ -7,6 +7,10 @@ a{
     text-decoration: none!important;
     color: black!important;
 }
+
+h1 a{
+    color: white!important;
+}
 header{
     color: white;
     text-align: center;

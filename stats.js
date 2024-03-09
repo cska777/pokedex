@@ -1,4 +1,3 @@
-// Replac0e ./data.json with your JSON feed
 let query = window.location.search.substring(1);
 
 
