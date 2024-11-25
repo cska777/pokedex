@@ -43,7 +43,7 @@ h3{
     background-color: transparent;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: column;
@@ -54,11 +54,14 @@ h3{
       
 }
 
-#profileLeft{
+#div-illu{
     grid-column-start: 1;
 }
-#profileRight{
+#div-stats{
     grid-column-start: 2;
+}
+#div-canva{
+    grid-column-start: 3;
     width: 400px;
 }
 
@@ -67,6 +70,92 @@ h2{
 
 }
 
+.type-label{
+    font-weight: 700;
+}
 
 
 
+.icone {
+    width: 30%;
+    margin: 0;
+    padding: 2%;
+    border: 1px solid white;
+}
+
+.i_bug {
+    background-color:rgb(146, 162, 18, 0.400);
+
+}
+
+.i_dark {
+    background-color: rgb(79, 63, 61,  0.400);
+}
+
+.i_dragon {
+    background-color:rgb(79, 96, 226, 0.400);
+
+}
+
+.i_electric {
+    background-color: rgb(247, 195, 12, 0.400);
+}
+
+.i_fairy {
+    background-color:rgb(239, 113, 240,  0.400);
+}
+
+.i_fighting {
+    background-color: rgb(255, 129, 0,  0.400);
+}
+
+.i_fire {
+    background-color: rgb(231, 35, 36, 0.400);
+}
+
+.i_flying {
+    background-color: rgb(132, 188, 241,  0.400);
+}
+
+.i_ghost {
+    background-color: hsla(300, 28%, 35%,  0.400);
+}
+
+.i_grass {
+    background-color:hsla(108, 64%, 39%,  0.400);
+}
+
+.i_ground {
+    background-color:hsla(27, 69%, 34%,  0.400);
+}
+
+.i_ice {
+    background-color:hsla(192, 100%, 62%,  0.400);
+}
+
+.i_normal {
+    background-color: hsla(120, 1%, 63%, 0.400);
+}
+
+.i_poison {
+    background-color: hsla(275, 58%, 52%, 0.400);
+}
+
+.i_psychic {
+    background-color: hsla(340, 85%, 59%, 0.400);
+
+}
+
+.i_rock {
+    background-color: hsla(55, 22%, 60%,  0.400);
+}
+
+.i_steel {
+    background-color: hsla(196, 39%, 55%, 0.400);
+
+
+}
+
+.i_water {  
+    background-color:#2480f097;
+}

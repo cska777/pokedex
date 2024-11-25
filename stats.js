@@ -13,8 +13,8 @@ let mama =
 
             let pokeI = i + 1
             image.src = "./Pokedex/pokemon_illu/" + [pokeI] + ".png"
-            image.style.width = "70%"
-            image.style.margin = "20%"
+            image.alt = "Illustration de " + [obj.name]
+            image.style.width = "300px"
             
             let queryInt = parseInt(query)
             
@@ -63,7 +63,7 @@ let mama =
                     console.log(data.table[i])
 
                     let barCanvas = document.getElementById("barCanvas").getContext('2d');
-                    let labels = ["hp", "attaque", "defense"];
+                    let labels = [`Hp`, "Attack", "Defense"];
                     let colors = ['#F2BFBE', '#EEDAA7', '#D6C6FE'];
 
                     let barChart = new Chart(barCanvas,{
@@ -98,32 +98,28 @@ let mama =
 
                     if(pokeI == queryInt){
                         let containerStats = document.getElementById("containerstat")
-                        let profileLeft = document.getElementById("profileLeft")
+                        let divIllu = document.getElementById("div-illu")
+                        let divStats = document.getElementById("div-stats")
                         let figure = document.createElement("figure")
                         let figcaption = document.createElement("figcaption")
-        
-                        let divStatsLeft = document.createElement("div")
-                        divStatsLeft.style.marginLeft = "5%"
-                        let idNamePoke = document.createElement("h3")
-                        idNamePoke.textContent = obj.id + " " +obj.name
-        
-                        let statsLign = document.createElement("p")
-                        statsLign.textContent = "HP: " + data.table[i].hp + " " + "ATTACK: " + data.table[i].attack + " "+ "DEFENSE: " + data.table[i].defense
-                        statsLign.style.fontSize = "25px"
+                        figcaption.textContent = `${obj.id} - ${obj.name}`
+                        figcaption.style.textAlign = "center"
+                        figcaption.style.fontSize = "30px"
+                        figcaption.style.textTransform = "capitalize"
+
 
                         let typeLign = document.createElement("p")
-                        typeLign.textContent = "Type : " + obj.type_1 + " " + obj.type_2
+                        typeLign.innerHTML = `<span class="type-label">Type :</span><br> ${obj.type_1} ${obj.type_2}`
                         typeLign.style.fontSize = "25px"
+                        typeLign.style.textTransform = "capitalize"
+                        
               
                         containerStats.appendChild(figure)
                         figure.appendChild(image)
                         figure.appendChild(figcaption)
-                        containerStats.appendChild(profileLeft)
-                        profileLeft.appendChild(figure)
-                        figure.appendChild(divStatsLeft)
-                        divStatsLeft.appendChild(idNamePoke)
-                        divStatsLeft.appendChild(statsLign)
-                        divStatsLeft.appendChild(typeLign)
+                        containerStats.appendChild(divIllu)
+                        divIllu.appendChild(figure)
+                        divStats.appendChild(typeLign)
         
                     }
                  }

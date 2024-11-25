@@ -11,37 +11,42 @@
 </head>
 <header>
     <h1> <a href="index.html">Pokédex</a></h1>
-    <a class="login" href="index4.html"><h3>Login</h3></a>
 </header>
 
 <body>
-    <div id="containerstat" class="stat" id="detail">
-        <div id="profileLeft"></div>
-        <div id="profileRight">
-            <div>
-                <h2>Stats</h2>
-            <!--arial-label=description pour le lecteur d'écran et role=c'est le role sur l'ecran-->
-            <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
+    <div>
+        <div id="containerstat" class="stat" id="detail">
+            <div id="div-illu"></div>
+            <div id="div-stats"></div>
+
+            <div id="div-canva">
+                <div>
+                    <!--arial-label=description pour le lecteur d'écran et role=c'est le role sur l'ecran-->
+                    <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
+                </div>
+
             </div>
 
         </div>
-        
-    </div>
-    
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-piechart-outlabels@1.1.2 "></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
 
     <script src="stats.js"></script>
-   
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous>">
-    </script>
+        </script>
 
 </body>
 
